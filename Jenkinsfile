@@ -12,7 +12,7 @@ pipeline{
         }
     }
 
-    notifications{
+    post{
         always{
             sh echo "Finalizo el Pipeline de Jenkins"
         }
