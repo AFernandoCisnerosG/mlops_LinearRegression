@@ -3,14 +3,19 @@ pipeline{
     agent any
 
     stages{
-        stage('Build'){
+        stage('Paso 1'){
             steps{
-                echo 'Building...'
+                script{
+                    sh "Paso 1 del Jenkisfile"
+                }
             }
         }
     }
 
     notifications{
+        always{
+            sh echo "Finalizo el Pipeline de Jenkins"
+        }
         success{
             mail(to:fernando.cisnerosgaytan@gmail.com, subject:"SUCCESS:${currentBuild.fullDisplayName}",
                 body: "Bien, funcinó!")
