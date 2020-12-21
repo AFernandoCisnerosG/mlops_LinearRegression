@@ -6,7 +6,7 @@ pipeline{
         stage('Paso 1'){
             steps{
                 script{
-                    sh "Paso 1 del Jenkisfile"
+                    echo "Paso 1 del Jenkisfile"
                 }
             }
         }
@@ -14,7 +14,7 @@ pipeline{
 
     post{
         always{
-            sh echo "Finalizo el Pipeline de Jenkins"
+            echo "Finalizo el Pipeline de Jenkins"
         }
         success{
             mail(to:fernando.cisnerosgaytan, subject:"SUCCESS:${currentBuild.fullDisplayName}",
