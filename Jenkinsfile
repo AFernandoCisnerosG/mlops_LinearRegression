@@ -12,4 +12,18 @@ pipeline{
         }
     }
 
+    post{
+        
+        always{
+            sh "echo 'Ha finalizado el Pipeline de Jenkins'"
+        }
+        success{
+            sh "echo 'Con exito!'"
+        }
+        failure{
+            sh "echo 'Con error!'"
+        }
+
+    }
+
 }
