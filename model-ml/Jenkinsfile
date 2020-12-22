@@ -27,24 +27,24 @@ pipeline{
             steps{
                 script{
                     sh '''
-                        docker run -dt --name python-ml-0.1 python-ml:v0.1
+                        docker run -it --rm --name python-ml-0.1 python-ml:v0.1
                     '''
                 }
             }
         }
 
-        stage('Paso 4: Test'){
-            steps{
-                script{
-                    sh '''
-                        echo 'Corriendo el modelo'
-                        python model.py
-                        echo 'Testing'
-                        pytest
-                    '''
-                }
-            }
-        }
+        #stage('Paso 4: Test'){
+        #    steps{
+        #        script{
+        #            sh '''
+        #                echo 'Corriendo el modelo'
+        #                python model.py
+        #                echo 'Testing'
+        #                pytest
+        #            '''
+        #        }
+        #    }
+        #}
 
 
     }
