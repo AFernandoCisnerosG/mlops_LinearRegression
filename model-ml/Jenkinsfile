@@ -42,10 +42,10 @@ pipeline{
             sh "echo 'Ha finalizado el Pipeline de Jenkins'"
         }
         success{
-            sh "echo 'Con exito!'"
+            sh "echo 'Los cambios tuvieron exito!'"
         }
         failure{
-            sh "echo 'Con error!'"
+            sh "echo 'Los cambios causaron un error!'"
         }
 
     }
