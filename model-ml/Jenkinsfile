@@ -33,6 +33,19 @@ pipeline{
             }
         }
 
+        stage('Paso 4: Test'){
+            steps{
+                script{
+                    sh '''
+                        echo 'Corriendo el modelo'
+                        python model.py
+                        echo 'Testing'
+                        pytest
+                    '''
+                }
+            }
+        }
+
 
     }
 
