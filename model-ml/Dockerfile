@@ -1,9 +1,9 @@
 FROM python:3
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/mlops
 
 COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD [ "python", "./app.py" ]
+CMD [ "python", "./model-ml/model.py"]
