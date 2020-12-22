@@ -27,7 +27,7 @@ pipeline{
             steps{
                 script{
                     sh '''
-                        docker run -it --rm --name python-ml-0.1 python-ml:v0.1
+                        docker run -dt --rm --name python-ml-0.1 python-ml:v0.1
                     '''
                 }
             }
