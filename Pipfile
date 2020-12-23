@@ -9,6 +9,8 @@ pandas = "*"
 numpy = "*"
 sklearn = "*"
 pytest = "*"
+seaborn = "*"
+xgboost = "*"
 
 [dev-packages]
 
